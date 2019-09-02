@@ -15,7 +15,7 @@ function heya() {
 //isUniform()
 
 function isUniform(x) {
-	for (var i = 0; i < x.length; i++)
+	for (var i = 0; i < x.length; i++) //can also set i = 1 since we dont need to compare to itself
 		if (x[0] !== x[i]) {
 			return false;
 		}
@@ -32,11 +32,21 @@ function sumArray(x) {
 	return sum;
 }
 
+//sumArray() written as a forEach
+
+function newSumArray(y) {
+	var total = 0
+	y.forEach(function(element){
+		total += element;
+	});
+	return total;
+}
+
 //max()
 
 function max(x) {
 	var maximum = x[0];
-	for (var i = 0; i < x.length; i++) {
+	for (var i = 0; i < x.length; i++) { //can also set i = 1 since we dont need to compare to itself
 		if (x[i] > maximum) {
 			maximum = x[i]
 		}
