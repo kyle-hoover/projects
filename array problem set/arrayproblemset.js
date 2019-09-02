@@ -1,7 +1,7 @@
 //printReverse()
 
 function reverse(x){
-	for (var i = x.length; i > -1; i --){
+	for (var i = x.length-1; i >= 0; i --){
 		console.log(x[i]); 
 	}
 }
