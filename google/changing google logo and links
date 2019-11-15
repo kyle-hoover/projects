@@ -1,0 +1,35 @@
+document.getElementById("hplogo");  //used the select an element after inspecting google to find the #hplogo as the ID for google's logo
+
+var logo = document.getElementById("hplogo"); //same thing as above, just set that logo = to var logo
+
+logo.setAttribute("srcset", "https://icatcare.org/app/uploads/2019/09/The-Kitten-Checklist-1.png"); // changed the attribute of that logo variable to a kitty picture
+
+logo.style.border = "2px solid purple"; //added a border to the logo cuz why not
+
+var links = document.getElementsByTagName("a") //this will give you a list of all of the "a" tag elements (all of the links pretty much like images, video, etc.)
+
+for (var i = 0; i < links.length; i++) { //this for loop will just log all of the contents of the links (the https stuff)
+    console.log(links[i].textContent)
+}
+
+for (var i = 0; i < links.length; i++) { //this gives every link we have a pink background
+   links[i].style.background = "pink";
+}
+
+for (var i = 0; i < links.length; i++) { //this gives every link we have a dashed border
+   links[i].style.border = "1px dashed purple";
+}
+
+for (var i = 0; i < links.length; i++) { //this gives every link we have a dashed border AND orange text
+  links[i].style.border = "1px dashed purple";
+	links[i].style.color = "orange";
+}
+
+for (var i = 0; i < links.length; i++) { //this prints out the name of every href ("images", "videos", etc.)
+	console.log(links[i].getAttribute("href"));
+}
+
+for (var i = 0; i < links.length; i++) { //this sets every href attribute to go to bing.com
+	links[i].setAttribute("href", "http://www.bing.com");
+}
+undefined
